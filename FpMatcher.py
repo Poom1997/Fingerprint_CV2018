@@ -9,9 +9,13 @@ import MnMatcher
 class FpMatcher:
     def __init__(self):
         #constructing FpSegmentator
+        
         #constructing FpEnhancer
+        
         #constructing MnExtractor
+        
         #constructing MnMatcher
+        
         
     def match(self, fpImg1, fpImg2):
         print("Stub - Fingerprint Matching")                #stub
