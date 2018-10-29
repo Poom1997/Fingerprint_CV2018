@@ -12,6 +12,7 @@ class MnExtractor:
     def __init__(self):
         #constructing Binarizer
         #constructing Skeletonizer
+        pass
         
     def extract(self, enhancedImg):
         print("Stub - Minutia Extraction")                      #stub
@@ -24,11 +25,12 @@ class MnExtractor:
               
 #-----------------------------
 if __name__ == "__main__":
-    img = cv2.imread("1_1.bmp", cv2.IMREAD_GRAYSCALE)
-    mnSet = MnExtractor.extract(img)
-    print(mnSet)
-    print(len(mnSet))
-    cv2.waitKey()
-    cv2.destroyAllWindows()
+    pass
+##    img = cv2.imread("1_1.bmp", cv2.IMREAD_GRAYSCALE)
+##    mnSet = MnExtractor.extract(img)
+##    print(mnSet)
+##    print(len(mnSet))
+##    cv2.waitKey()
+##    cv2.destroyAllWindows()
 
 #-----------------------------

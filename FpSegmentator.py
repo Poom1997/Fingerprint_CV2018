@@ -34,13 +34,33 @@ class FpSegmentator:
                     if(stdx+stdy < 150):
                         for r in range(row,row+self.blockSize):
                             for c in range(col,col+self.blockSize):
-                                segmentedImg[r,c] = 255
+                                segmentedImg[r,c] = 0
                     
                 except Exception:
                     pass     
         
         return segmentedImg, maskImg
 
+    def inverseSegment(self, fpImg):
+        segmentedImg = fpImg                                    #stub       
+        maskImg = fpImg   
+        rows, cols, *ch = maskImg.shape
+        size = self.blockSize**2
+
+        for row in range(0,rows,self.blockSize):
+            for col in range(0,cols,self.blockSize):
+                black_box = True
+                for r in range(row,row+self.blockSize):
+                    for c in range(col,col+self.blockSize):
+                        if(segmentedImg[r,c] != 0):
+                            black_box = False
+                            break
+                    if(black_box == False):
+                        break
+                if(black_box == True):
+                    segmentedImg[row:row+self.blockSize, col:col+self.blockSize] = 255
+            
+        return segmentedImg
    
 #-----------------------------
 

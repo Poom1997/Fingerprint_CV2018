@@ -14,13 +14,14 @@ class FpEnhancer:
         enhImg = fpImg                                          #stub
         return enhImg
         
-#-----------------------------
+###-----------------------------
 if __name__ == "__main__":
-    img = cv2.imread("1_1.bmp", cv2.IMREAD_GRAYSCALE)
-    binImg = Binarizer.binarize(img)
-    cv2.imshow("binary", binImg)
-    cv2.waitKey()
-    cv2.destroyAllWindows()
+    pass
+##    img = cv2.imread("1_1.bmp", cv2.IMREAD_GRAYSCALE)
+##    binImg = Binarizer.binarize(img)
+##    cv2.imshow("binary", binImg)
+##    cv2.waitKey()
+##    cv2.destroyAllWindows()
 
 #-----------------------------
 

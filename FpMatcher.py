@@ -4,6 +4,8 @@ import FpSegmentator
 import FpEnhancer
 import MnExtractor
 import MnMatcher
+#iceyo try--------------------
+import Binarizer
 
 #-----------------------------
 class FpMatcher:
@@ -15,7 +17,7 @@ class FpMatcher:
         #constructing MnExtractor
         
         #constructing MnMatcher
-        
+        pass
         
     def match(self, fpImg1, fpImg2):
         print("Stub - Fingerprint Matching")                #stub
@@ -29,17 +31,30 @@ class FpMatcher:
 
 if __name__ == "__main__":
     #read fingerprint image 1
-    fpImg1 = cv2.imread("../FP DB1 (train subset)/1_1.bmp", cv2.IMREAD_GRAYSCALE)
-    cv2.imshow("fp1", fpImg1);
+##    fpImg1 = cv2.imread("../FP DB1 (train subset)/1_1.bmp", cv2.IMREAD_GRAYSCALE)
+##    cv2.imshow("fp1", fpImg1);
+##
+##    #read fingerprint image 2
+##    fpImg2 = cv2.imread("../FP DB1 (train subset)/1_2.bmp", cv2.IMREAD_GRAYSCALE)
+##    cv2.imshow("fp2", fpImg2);
+##
+##    #match two fingerprint images
+##    fpMatcher = FpMatcher()
+##    similarity = fpMatcher.match(fpImg1, fpImg2)
+##    print("Similary = ", similarity)
+#-----------------------------
+    ##Iceyo try code---------------------------------------
+    img = cv2.imread("img/1_1.bmp", cv2.IMREAD_GRAYSCALE)
+    cv2.imshow("img", img)
+    segmentator = FpSegmentator.FpSegmentator(16)
+    segmentedImg,maskImg = segmentator.segment(img)
+    cv2.imshow("segment", segmentedImg)
 
-    #read fingerprint image 2
-    fpImg2 = cv2.imread("../FP DB1 (train subset)/1_2.bmp", cv2.IMREAD_GRAYSCALE)
-    cv2.imshow("fp2", fpImg2);
+    binImg = Binarizer.Binarizer.binarize(segmentedImg)
+    cv2.imshow("binary", binImg)
 
-    #match two fingerprint images
-    fpMatcher = FpMatcher()
-    similarity = fpMatcher.match(fpImg1, fpImg2)
-    print("Similary = ", similarity)
+    inverseSegmentImg = segmentator.inverseSegment(binImg)
+    cv2.imshow("inverseSegmentImg", inverseSegmentImg)
 
     cv2.waitKey()
     cv2.destroyAllWindows()
