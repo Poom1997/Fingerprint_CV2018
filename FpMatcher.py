@@ -61,12 +61,19 @@ if __name__ == "__main__":
     skeletonizeImg = skeletonizer.skeletonize(inverseSegmentImg)
     cv2.imshow("skeletonizeImg", skeletonizeImg)
 
+    minutiaImg = skeletonizeImg.copy()
     mnExtractor = MnExtractor.MnExtractor()
-    bifurcation_list = mnExtractor.extract(skeletonizeImg) 
-    color_img = cv2.cvtColor(skeletonizeImg,cv2.COLOR_GRAY2RGB)
-    rows, cols, *ch = color_img.shape
-    
-    
+    bifurcation_list = mnExtractor.extract(skeletonizeImg)
+    print(bifurcation_list)
+    minutiaImg = cv2.cvtColor(minutiaImg,cv2.COLOR_GRAY2BGR)
+    rows, cols, *ch = minutiaImg.shape
+    for row in range(1,rows-1):
+        for col in range(1,cols-1):
+            if((row,col) in bifurcation_list):
+                minutiaImg[row,col] = [0,0,255]
+                
+    cv2.imshow("minutiaImg", minutiaImg)
+                
     
     cv2.waitKey()
     cv2.destroyAllWindows()

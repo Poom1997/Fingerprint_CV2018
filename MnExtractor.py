@@ -33,7 +33,7 @@ class MnExtractor:
         for row in range(1,rows-1):
             for col in range(1,cols-1):
                 if(self.calculateCn(minutiaImg[row-1:row+2,col-1:col+2].copy()) == 3):
-                   bifurcation_list.append(row,col)
+                   bifurcation_list.append((row,col))
         return bifurcation_list
             
 
