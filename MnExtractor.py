@@ -26,15 +26,20 @@ class MnExtractor:
         #iceyo try code
 
         bifurcation_list = []
+        ridge_ending_list = []
         minutia_count = 0
         
         minutiaImg = enhancedImg.copy()                #stub
         rows, cols, *ch = minutiaImg.shape
         for row in range(1,rows-1):
             for col in range(1,cols-1):
-                if(self.calculateCn(minutiaImg[row-1:row+2,col-1:col+2].copy()) == 3):
-                   bifurcation_list.append((row,col))
-        return bifurcation_list
+                if(minutiaImg[row,col] == 0):
+                    cn = self.calculateCn(minutiaImg[row-1:row+2,col-1:col+2].copy())
+                    if(cn == 1):
+                        ridge_ending_list.append((row,col))
+                    elif(cn == 3):
+                        bifurcation_list.append((row,col))
+        return ridge_ending_list,bifurcation_list
             
 
     def calculateCn(self,mat):

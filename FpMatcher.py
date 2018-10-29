@@ -63,13 +63,15 @@ if __name__ == "__main__":
 
     minutiaImg = skeletonizeImg.copy()
     mnExtractor = MnExtractor.MnExtractor()
-    bifurcation_list = mnExtractor.extract(skeletonizeImg)
+    ridge_ending_list,bifurcation_list = mnExtractor.extract(skeletonizeImg)
     minutiaImg = cv2.cvtColor(minutiaImg,cv2.COLOR_GRAY2BGR)
     rows, cols, *ch = minutiaImg.shape
     for row in range(1,rows-1):
         for col in range(1,cols-1):
             if((row,col) in bifurcation_list):
                 minutiaImg[row-1:row+2,col-1:col+2] = [0,0,255]
+            elif((row,col) in ridge_ending_list):
+                minutiaImg[row-1:row+2,col-1:col+2] = [255,0,0]
     cv2.imshow("minutiaImg", minutiaImg)
                 
     
