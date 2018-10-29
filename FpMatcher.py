@@ -6,6 +6,7 @@ import MnExtractor
 import MnMatcher
 #iceyo try--------------------
 import Binarizer
+import Skeletonizer
 
 #-----------------------------
 class FpMatcher:
@@ -44,7 +45,7 @@ if __name__ == "__main__":
 ##    print("Similary = ", similarity)
 #-----------------------------
     ##Iceyo try code---------------------------------------
-    img = cv2.imread("img/1_1.bmp", cv2.IMREAD_GRAYSCALE)
+    img = cv2.imread("img/1_3.bmp", cv2.IMREAD_GRAYSCALE)
     cv2.imshow("img", img)
     segmentator = FpSegmentator.FpSegmentator(16)
     segmentedImg,maskImg = segmentator.segment(img)
@@ -56,6 +57,10 @@ if __name__ == "__main__":
     inverseSegmentImg = segmentator.inverseSegment(binImg)
     cv2.imshow("inverseSegmentImg", inverseSegmentImg)
 
+    skeletonizer = Skeletonizer.Skeletonizer()
+    skeletonizeImg = skeletonizer.skeletonize(inverseSegmentImg)
+    cv2.imshow("skeletonizeImg", skeletonizeImg)
+    
     cv2.waitKey()
     cv2.destroyAllWindows()
 #-----------------------------
