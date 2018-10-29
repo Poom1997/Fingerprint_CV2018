@@ -8,6 +8,15 @@ class Skeletonizer:
         print("   Input - a binary image")      #stub
         print("   Output - a skeleton image")   #stub
         skeletonImg = binImg                    #stub
+
+        rows, cols, *ch = binImg.shape
+        deleting = True
+        while(deleting):
+            deleting = False
+            for row in range(0,rows):
+                for col in range(0,cols):
+                    pass
+                    
         return skeletonImg
     
 #-----------------------------
