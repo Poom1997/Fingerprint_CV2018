@@ -49,7 +49,6 @@ class MnExtractor:
             Sum += abs((lt[i]/255) - (lt[i+1]/255))
         Sum += abs((lt[-1]/255)  - (lt[0]/255))
         return 0.5 * Sum
-            
               
 #-----------------------------
 if __name__ == "__main__":
