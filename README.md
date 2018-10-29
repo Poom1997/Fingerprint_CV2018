@@ -1,3 +1,6 @@
+# Fingerprint_CV2018
+In-class project to detect fingerprints.
+
 # INTRODUCTION
 
   This program is created for <br>
