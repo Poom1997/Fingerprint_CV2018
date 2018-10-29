@@ -60,6 +60,13 @@ if __name__ == "__main__":
     skeletonizer = Skeletonizer.Skeletonizer()
     skeletonizeImg = skeletonizer.skeletonize(inverseSegmentImg)
     cv2.imshow("skeletonizeImg", skeletonizeImg)
+
+    mnExtractor = MnExtractor.MnExtractor()
+    bifurcation_list = mnExtractor.extract(skeletonizeImg) 
+    color_img = cv2.cvtColor(skeletonizeImg,cv2.COLOR_GRAY2RGB)
+    rows, cols, *ch = color_img.shape
+    
+    
     
     cv2.waitKey()
     cv2.destroyAllWindows()
