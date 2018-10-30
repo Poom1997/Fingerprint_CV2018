@@ -35,11 +35,32 @@ class MnExtractor:
             for col in range(1,cols-1):
                 if(minutiaImg[row,col] == 0):
                     cn = self.calculateCn(minutiaImg[row-1:row+2,col-1:col+2].copy())
-                    if(cn == 1):
+                    if(cn == 1 and (not self.isEndPointBoundary(minutiaImg,(row,col)))):
                         ridge_ending_list.append((row,col))
                     elif(cn == 3):
                         bifurcation_list.append((row,col))
         return ridge_ending_list,bifurcation_list
+
+
+    def isEndPointBoundary(self,mat,point):
+        isBoundary = True
+        rows, cols, *ch = mat.shape
+        for col in range(point[1]-1, 0,-1):
+            if(mat[point[0], col] == 0):
+                isBoundary = False
+                break
+
+        if(isBoundary == True):
+            return isBoundary
+        
+        isBoundary = True
+        for col in range(point[1]+1, cols):
+            if(mat[point[0], col] == 0):
+                isBoundary = False
+                break
+
+        return isBoundary
+                
             
 
     def calculateCn(self,mat):

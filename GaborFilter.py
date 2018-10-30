@@ -1,29 +1,38 @@
 import cv2
 import numpy as np
 
-#-----------------------------
+# -----------------------------
+
+
 class GaborFilter:
     def __init__(self, size, orientation, frequency):
-        print("Constructing a Gabor filter")   #stub
+        print("Constructing a Gabor filter")  # stub
         self.size = size
         self.orientation = orientation
-        self.frequency = frequency
-        
+        self.frequency = frequency #freq = lamda
+
     def getKernal(self):
-        kernel = cv2.getGaborKernel((9,9), 4, 90, 1.5, 0.5, 0, ktype=cv2.CV_64F)
+        # kernel = cv2.getGaborKernel(
+        #     (9, 9), 4, 90, 1.5, 0.5, 0, ktype=cv2.CV_64F)
+
+        kernel = cv2.getGaborKernel(
+            self.size, 4, self.orientation, self.frequency, 0.5, 0, ktype=cv2.CV_64F
+        )
+
         return kernel
-        
-#-----------------------------
+
+
+# -----------------------------
 if __name__ == "__main__":
     pass
 ##    img = cv2.imread('img/1_1.BMP', cv2.IMREAD_GRAYSCALE)
 ##    Filter = GaborFilter(3,180,0)
 ##    kernal = Filter.getKernal()
-##    
+##
 ##    filtered_img = cv2.filter2D(img, cv2.CV_8UC3, kernal)
 ##
 ##    cv2.imshow('image', img)
-##    cv2.waitKey(0)
-##    cv2.destroyAllWindows()
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
-#-----------------------------
+# -----------------------------
