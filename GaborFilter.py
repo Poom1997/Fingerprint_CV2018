@@ -16,7 +16,7 @@ class GaborFilter:
         #     (9, 9), 4, 90, 1.5, 0.5, 0, ktype=cv2.CV_64F)
 
         kernel = cv2.getGaborKernel(
-            self.size, 4, self.orientation, self.frequency, 0.5, 0, ktype=cv2.CV_64F
+            self.size, 0.5, self.orientation, self.frequency, 1, 0, ktype=cv2.CV_32F
         )
 
         return kernel
