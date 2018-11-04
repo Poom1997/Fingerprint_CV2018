@@ -30,12 +30,15 @@ if __name__ == "__main__":
     ##pass
     img = cv2.imread("img/1_1.bmp", cv2.IMREAD_GRAYSCALE)
     fpEnhancer = FpEnhancer()
-    img = fpEnhancer.enhance(img, img)
+    binImg = Binarizer.binarize(img)
+    blur = cv2.bilateralFilter(binImg,11,115,115)
+    cv2.imshow("blur", blur)
+    img = fpEnhancer.enhance(blur, img)
 
 
 
     # binImg = Binarizer.binarize(img)
-    # cv2.imshow("binary", binImg)
+    
     cv2.waitKey()
     cv2.destroyAllWindows()
 
