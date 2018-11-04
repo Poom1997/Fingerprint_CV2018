@@ -31,7 +31,7 @@ class GaborFilterbank:
                 orientationOfBlock = orientationField[row//16][col//16]
                 #print(orientationOfBlock, end=' ')
                 filteredBlock = cv2.filter2D(block, cv2.CV_32F, self.gaborFilters[orientationOfBlock])
-                
+                fpImg[row: row+16, col: col+16] = filteredBlock
             #print()
 
         cv2.imshow('filted by gabor', fpImg)
@@ -44,10 +44,11 @@ class GaborFilterbank:
 
 # -----------------------------
 if __name__ == "__main__":
-    gBank = GaborFilterbank()
-
-    fpImg = cv2.imread("img/1_1.bmp", cv2.IMREAD_GRAYSCALE)
-    gBank.filter(fpImg,1,1)
-    cv2.waitKey(0)
+    pass
+##    gBank = GaborFilterbank()
+##
+##    fpImg = cv2.imread("img/1_1.bmp", cv2.IMREAD_GRAYSCALE)
+##    gBank.filter(fpImg,1,1)
+##    cv2.waitKey(0)
 
 # -----------------------------
