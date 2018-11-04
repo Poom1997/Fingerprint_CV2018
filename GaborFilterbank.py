@@ -14,7 +14,7 @@ class GaborFilterbank:
         for radian in np.arange(0, np.pi, np.pi / 8):
             degree = math.degrees(radian)
 
-            gb = GaborFilter.GaborFilter((9, 9), degree, 6)
+            gb = GaborFilter.GaborFilter((16, 16), degree, 6)
             self.gaborFilters.append(gb.getKernal())
 
         # gaborFilters = ...                       #list of Gabor filters
@@ -23,12 +23,11 @@ class GaborFilterbank:
         print("Stub - Gabor filtering")  # stub
 
         print("   Input - a fingerprint image (gray-scale)")  # stub
-        img = cv2.imread('img/1_1.BMP', cv2.IMREAD_GRAYSCALE)
+        img = fpImg
 
         i = 0
         for gabor in self.gaborFilters:
             filtered_img = cv2.filter2D(img, cv2.CV_8UC3, gabor)
-            print('eee')
             cv2.imshow('filted image' + str(i), filtered_img)
             i +=1
 
