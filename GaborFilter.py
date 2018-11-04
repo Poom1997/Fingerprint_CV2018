@@ -21,18 +21,17 @@ class GaborFilter:
 
         return kernel
 
-
 # -----------------------------
 if __name__ == "__main__":
-    pass
-##    img = cv2.imread('img/1_1.BMP', cv2.IMREAD_GRAYSCALE)
-##    Filter = GaborFilter(3,180,0)
-##    kernal = Filter.getKernal()
-##
-##    filtered_img = cv2.filter2D(img, cv2.CV_8UC3, kernal)
-##
-##    cv2.imshow('image', img)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
+
+  img = cv2.imread('img/1_1.BMP', cv2.IMREAD_GRAYSCALE)
+  Filter = GaborFilter((6,6),180,0)
+  kernal = Filter.getKernal()
+
+  filtered_img = cv2.filter2D(img, cv2.CV_8UC3, kernal)
+
+  cv2.imshow('image', img)
+  cv2.waitKey(0)
+  cv2.destroyAllWindows()
 
 # -----------------------------

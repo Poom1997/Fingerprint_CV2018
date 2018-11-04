@@ -31,7 +31,7 @@ class OfDetector:
                 orientation = 0.5 * math.atan(sum1 / sum2)     
                 orientation = math.degrees(orientation)
                 of[row//16,col//16] = self.quantize(orientation+90)
-
+        
         return of
 
     def quantize(self, degrees):
@@ -60,8 +60,8 @@ if __name__ == "__main__":
     inpImg = cv2.imread("img/1_1.BMP", cv2.IMREAD_GRAYSCALE)
     ofDetect = OfDetector()
     temp = ofDetect.detect(inpImg)
-    height, width = inpImg.shape
     print(temp)
+    height, width = inpImg.shape
     cv2.waitKey()
     cv2.destroyAllWindows()
 
