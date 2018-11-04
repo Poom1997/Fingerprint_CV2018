@@ -8,7 +8,7 @@ class GaborFilterbank:
     def __init__(self):
         print("Stub - Constructing Gabor filterbank")  # stub
         self.gaborFilters = {}
-        orList = [0, 22.5,45,67.5,90,112.5,135,157.5]
+        orList = [0, 22.5,45,67.5,90,112.5,135,157.5,180]
         for degree in orList:
             gb = GaborFilter.GaborFilter((16, 16), degree, 8)
             #self.gaborFilters.append(gb.getKernal())

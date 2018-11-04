@@ -12,13 +12,10 @@ class GaborFilter:
         self.frequency = frequency #freq = lamda
 
     def getKernal(self):
-        # kernel = cv2.getGaborKernel(
-        #     (9, 9), 4, 90, 1.5, 0.5, 0, ktype=cv2.CV_64F)
-
         kernel = cv2.getGaborKernel(
-            self.size, 4, self.orientation, self.frequency, 0.5, 0, ktype=cv2.CV_64F
+            self.size, 2.5 , self.orientation, self.frequency, 5, 0, ktype=cv2.CV_32F
         )
-
+        
         return kernel
 
 # -----------------------------
