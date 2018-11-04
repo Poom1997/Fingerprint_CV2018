@@ -23,7 +23,6 @@ class OfDetector:
 
         for row in range(0,width, 16):
             for col in range(0,height, 16):
-                tmp = []
                 for i in range(row, row + 16):
                     for j in range(col, col + 16): 
                         sum1 += 2 * gx[i,j] * gy[i,j]
@@ -31,7 +30,9 @@ class OfDetector:
                 orientation = 0.5 * math.atan(sum1 / sum2)     
                 orientation = math.degrees(orientation)
                 of[row//16,col//16] = self.quantize(orientation+90)
-        
+                sum1=0
+                sum2=1
+        print(of)
         return of
 
     def quantize(self, degrees):
@@ -44,27 +45,29 @@ class OfDetector:
         elif(degrees >= 67.5 and degrees < 90):
             return 67.5
         elif(degrees >= 90 and degrees < 112.5):
-            return 90
+            return 90.0
         elif(degrees >= 112.5 and degrees < 135):
             return 112.5
         elif(degrees >= 135 and degrees < 157.5):
             return 135.0
         elif(degrees >=157.5 and degrees < 180):
             return 157.5
+        elif(degrees >=180 and degrees < 202.5):
+            return 180
         else:
             return None
         
 #-----------------------------
 if __name__ == "__main__":
-    ##pass
-    inpImg = cv2.imread("img/1_1.BMP", cv2.IMREAD_GRAYSCALE)
-    ofDetect = OfDetector()
-    temp = ofDetect.detect(inpImg)
-    print(temp)
-    height, width = inpImg.shape
-    cv2.waitKey()
-    cv2.destroyAllWindows()
-ั
+    pass
+##    inpImg = cv2.imread("img/1_1.BMP", cv2.IMREAD_GRAYSCALE)
+##    ofDetect = OfDetector()
+##    temp = ofDetect.detect(inpImg)
+##    print(len(temp))
+##    height, width = inpImg.shape
+##    cv2.waitKey()
+##    cv2.destroyAllWindows()
+
 #-----------------------------
 
 
