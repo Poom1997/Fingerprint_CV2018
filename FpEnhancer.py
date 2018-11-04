@@ -31,7 +31,7 @@ if __name__ == "__main__":
     img = cv2.imread("img/1_1.bmp", cv2.IMREAD_GRAYSCALE)
     fpEnhancer = FpEnhancer()
     binImg = Binarizer.binarize(img)
-    blur = cv2.bilateralFilter(binImg,11,115,115)
+    blur = cv2.bilateralFilter(binImg,11,100,100)
     cv2.imshow("blur", blur)
     img = fpEnhancer.enhance(blur, img)
 

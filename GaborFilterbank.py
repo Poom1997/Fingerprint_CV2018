@@ -10,7 +10,7 @@ class GaborFilterbank:
         self.gaborFilters = {}
         orList = [0, 22.5,45,67.5,90,112.5,135,157.5]
         for degree in orList:
-            gb = GaborFilter.GaborFilter((16, 16), degree, 6)
+            gb = GaborFilter.GaborFilter((16, 16), degree, 8)
             #self.gaborFilters.append(gb.getKernal())
             self.gaborFilters[degree] = gb.getKernal()
 
@@ -18,6 +18,7 @@ class GaborFilterbank:
 
     def filter(self, fpImg, orientationField, mskImg):
         fpImg = np.float32(fpImg)
+        cv2.imshow('filted by gabor', fpImg)
         #print(orientationField)
         print("Stub - Gabor filtering")  # stub
         print("   Input - a fingerprint image (gray-scale)")  # stub
@@ -29,10 +30,10 @@ class GaborFilterbank:
             for col in range(0, cols, 16):
                 block = fpImg[row: row+16, col: col+16]
                 orientationOfBlock = orientationField[row//16][col//16]
-                #print(orientationOfBlock, end=' ')
+                print(orientationOfBlock, end=' ')
                 filteredBlock = cv2.filter2D(block, cv2.CV_32F, self.gaborFilters[orientationOfBlock])
                 fpImg[row: row+16, col: col+16] = filteredBlock
-            #print()
+            print()
 
         cv2.imshow('filted by gabor', fpImg)
 
