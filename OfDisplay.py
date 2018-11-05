@@ -21,7 +21,7 @@ class OfDisplay:
         ofImg[:] = 255
 
         rows, cols = ofImg.shape
-        print(ofMat)
+        #print(ofMat)
         for row in range(0,rows,16):
             for col in range(0,cols,16):
                 if(of[row//16,col//16] == 0 or of[row//16,col//16] == 180):
