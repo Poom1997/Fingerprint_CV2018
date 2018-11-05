@@ -8,6 +8,7 @@ import MnMatcher
 import Binarizer
 import Skeletonizer
 import OfDetector
+import OfDisplay
 
 #-----------------------------
 class FpMatcher:
@@ -61,6 +62,11 @@ if __name__ == "__main__":
                 enhancedImg[row,col] = 255
     cv2.imshow("Enhanced", enhancedImg)
 
+    #display OF
+    ofDisplay = OfDisplay.OfDisplay()
+    ofImg = ofDisplay.displayOrient(fpEnhancer.getOfMatrix(),enhancedImg)
+    cv2.imshow("Orientation Field", ofImg)
+
     #thin
     skeletonizer = Skeletonizer.Skeletonizer()
     skeletonizeImg = skeletonizer.skeletonize(enhancedImg)
@@ -93,11 +99,12 @@ if __name__ == "__main__":
     for row in range(1,rows-1):
         for col in range(1,cols-1):
             if((row,col) in minutia_list):
-                minutiaImg2[row-1:row+2,col-1:col+2] = [255,0,0]
+                minutiaImg2[row-1:row+2,col-1:col+2] = [0,255,0]
     cv2.imshow("True Minutia", minutiaImg2)
     
     print(len(minutia_list))
- 
+    print(str(fpEnhancer.getOrientation(51,136)))
+    
     cv2.waitKey()
     cv2.destroyAllWindows()
 #-----------------------------

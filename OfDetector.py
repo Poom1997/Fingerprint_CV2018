@@ -6,6 +6,7 @@ SIZE = 16
 #-----------------------------
 class OfDetector:
     def __init__(self):
+        self.original = []
         self.of = []
     
     def findOrientationBlock(self, block):
@@ -23,22 +24,26 @@ class OfDetector:
         orientation = (np.arctan2(sum1, sum2) * 0.5)
         orientation = (orientation + np.pi * 0.5) % np.pi
 
-        return math.degrees(orientation)+45
+        return math.degrees(orientation)+45, math.degrees(orientation) 
     
     def detect(self, fpImg):
         #Detect Dimensions
         height, width = fpImg.shape
 
         #Var. Init.
+        self.original = np.zeros((SIZE,SIZE), dtype=np.float32)
         self.of = np.zeros((SIZE,SIZE), dtype=np.float32)
+        self.ofMat = np.zeros((SIZE,SIZE), dtype=np.float32)
 
         for row in range(0,width, SIZE):
             for col in range(0,height, SIZE):
                 block = fpImg[row:row+SIZE, col:col+SIZE]
-                temp = self.findOrientationBlock(block)
+                temp, temp2 = self.findOrientationBlock(block)
+                self.original[row // SIZE, col // SIZE] = temp2
                 self.of[row // SIZE, col // SIZE] = self.quantize(temp)
+                self.ofMat[row // SIZE, col // SIZE] = self.quantize(temp2)
                 
-        return self.of
+        return self.of, self.ofMat, self.original
 
     def quantize(self, degrees):
         orList = [0, 22.5, 45, 67.5, 90, 112.5, 135, 157.5]
@@ -67,5 +72,3 @@ if __name__ == "__main__":
 ##    cv2.destroyAllWindows()
 
 #-----------------------------
-
-

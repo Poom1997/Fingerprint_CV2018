@@ -10,7 +10,7 @@ class GaborFilterbank:
         self.gaborFilters = {}
         orList = [0, 22.5,45,67.5,90,112.5,135,157.5,180]
         for degree in orList:
-            gb = GaborFilter.GaborFilter((16, 16), degree, 8)
+            gb = GaborFilter.GaborFilter((11,11), degree, 8)
             self.gaborFilters[degree] = gb.getKernal()
 
 
