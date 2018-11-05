@@ -50,7 +50,7 @@ class OfDetector:
         maxd = 180
         temp = 0
         for degree in orList:
-            deg = abs(o-degrees)
+            deg = abs(degree-degrees)
             if deg<maxd:
                 maxd = deg
                 temp = degree
