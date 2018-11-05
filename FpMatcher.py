@@ -51,34 +51,34 @@ if __name__ == "__main__":
     cv2.imshow("InverseSegmented", inverseSegmentImg)
 
     #enhance
-    fpEnhancer = FpEnhancer.FpEnhancer()
-    blur = cv2.bilateralFilter(inverseSegmentImg,11,100,100)
-    enhancedImg = fpEnhancer.enhance(blur, inverseSegmentImg)
-    cv2.imshow("Enhanced", enhancedImg)
+##    fpEnhancer = FpEnhancer.FpEnhancer()
+##    blur = cv2.bilateralFilter(inverseSegmentImg,11,100,100)
+##    enhancedImg = fpEnhancer.enhance(blur, inverseSegmentImg)
+##    cv2.imshow("Enhanced", enhancedImg)
     
 
-##    #binarize again
-##    binImg = Binarizer.Binarizer.binarize(enhancedImg)
-##    cv2.imshow("Binarize2", binImg)
-##
-##    #thin
-##    skeletonizer = Skeletonizer.Skeletonizer()
-##    skeletonizeImg = skeletonizer.skeletonize(binImg)
-##    cv2.imshow("Skeletonized", skeletonizeImg)
-##
-##    #extract
-##    minutiaImg = skeletonizeImg.copy()
-##    mnExtractor = MnExtractor.MnExtractor()
-##    ridge_ending_list,bifurcation_list = mnExtractor.extract(skeletonizeImg)
-##    minutiaImg = cv2.cvtColor(minutiaImg,cv2.COLOR_GRAY2BGR)
-##    rows, cols, *ch = minutiaImg.shape
-##    for row in range(1,rows-1):
-##        for col in range(1,cols-1):
-##            if((row,col) in bifurcation_list):
-##                minutiaImg[row-1:row+2,col-1:col+2] = [0,0,255]
-##            elif((row,col) in ridge_ending_list):
-##                minutiaImg[row-1:row+2,col-1:col+2] = [255,0,0]
-##    cv2.imshow("Minutia", minutiaImg)
+    #binarize again
+    binImg = Binarizer.Binarizer.binarize(enhancedImg)
+    cv2.imshow("Binarize2", binImg)
+
+    #thin
+    skeletonizer = Skeletonizer.Skeletonizer()
+    skeletonizeImg = skeletonizer.skeletonize(binImg)
+    cv2.imshow("Skeletonized", skeletonizeImg)
+
+    #extract
+    minutiaImg = skeletonizeImg.copy()
+    mnExtractor = MnExtractor.MnExtractor()
+    ridge_ending_list,bifurcation_list = mnExtractor.extract(skeletonizeImg)
+    minutiaImg = cv2.cvtColor(minutiaImg,cv2.COLOR_GRAY2BGR)
+    rows, cols, *ch = minutiaImg.shape
+    for row in range(1,rows-1):
+        for col in range(1,cols-1):
+            if((row,col) in bifurcation_list):
+                minutiaImg[row-1:row+2,col-1:col+2] = [0,0,255]
+            elif((row,col) in ridge_ending_list):
+                minutiaImg[row-1:row+2,col-1:col+2] = [255,0,0]
+    cv2.imshow("Minutia", minutiaImg)
                 
     
     cv2.waitKey()
