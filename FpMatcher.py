@@ -51,19 +51,14 @@ if __name__ == "__main__":
     cv2.imshow("InverseSegmented", inverseSegmentImg)
 
     #enhance
-##    fpEnhancer = FpEnhancer.FpEnhancer()
-##    blur = cv2.bilateralFilter(inverseSegmentImg,11,100,100)
-##    enhancedImg = fpEnhancer.enhance(blur, inverseSegmentImg)
-##    cv2.imshow("Enhanced", enhancedImg)
-    
-
-    #binarize again
-    binImg = Binarizer.Binarizer.binarize(enhancedImg)
-    cv2.imshow("Binarize2", binImg)
+    fpEnhancer = FpEnhancer.FpEnhancer()
+    blur = cv2.bilateralFilter(inverseSegmentImg,11,100,100)
+    enhancedImg = fpEnhancer.enhance(blur, inverseSegmentImg)
+    cv2.imshow("Enhanced", enhancedImg)
 
     #thin
     skeletonizer = Skeletonizer.Skeletonizer()
-    skeletonizeImg = skeletonizer.skeletonize(binImg)
+    skeletonizeImg = skeletonizer.skeletonize(enhancedImg)
     cv2.imshow("Skeletonized", skeletonizeImg)
 
     #extract
