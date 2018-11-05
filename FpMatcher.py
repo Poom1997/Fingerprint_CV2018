@@ -16,7 +16,7 @@ class FpMatcher:
         
         #constructing FpEnhancer
         
-        #constructing MnExtractor
+        #constructing MnExtractors
         
         #constructing MnMatcher
         pass
@@ -34,7 +34,7 @@ class FpMatcher:
 if __name__ == "__main__":
     ##Iceyo try code---------------------------------------
     
-    img = cv2.imread("img/1_3.bmp", cv2.IMREAD_GRAYSCALE)
+    img = cv2.imread("img/1_1.bmp", cv2.IMREAD_GRAYSCALE)
     cv2.imshow("Original Image", img)
 
     #segment1
@@ -60,7 +60,6 @@ if __name__ == "__main__":
             if(enhancedImg[row,col] != 0):
                 enhancedImg[row,col] = 255
     cv2.imshow("Enhanced", enhancedImg)
-                
 
     #thin
     skeletonizer = Skeletonizer.Skeletonizer()
@@ -71,7 +70,17 @@ if __name__ == "__main__":
     minutiaImg = skeletonizeImg.copy()
     mnExtractor = MnExtractor.MnExtractor()
     ridge_ending_list,bifurcation_list = mnExtractor.extract(skeletonizeImg)
+    
+    ridge_ending_list = mnExtractor.removeSideMinutia(skeletonizeImg,ridge_ending_list)
+    ridge_ending_list = mnExtractor.removeBrokenRidge(ridge_ending_list)
+    bifurcation_list = mnExtractor.removeSideMinutia(skeletonizeImg,bifurcation_list)
+    bifurcation_list = mnExtractor.removeBrokenRidge(bifurcation_list)
+ 
+    minutia_list = list(set(ridge_ending_list + bifurcation_list))
+    minutia_list = mnExtractor.removeBrokenRidge(minutia_list)
+
     minutiaImg = cv2.cvtColor(minutiaImg,cv2.COLOR_GRAY2BGR)
+    minutiaImg2 = minutiaImg.copy()
     rows, cols, *ch = minutiaImg.shape
     for row in range(1,rows-1):
         for col in range(1,cols-1):
@@ -80,8 +89,15 @@ if __name__ == "__main__":
             elif((row,col) in ridge_ending_list):
                 minutiaImg[row-1:row+2,col-1:col+2] = [255,0,0]
     cv2.imshow("Minutia", minutiaImg)
-                
+
+    for row in range(1,rows-1):
+        for col in range(1,cols-1):
+            if((row,col) in minutia_list):
+                minutiaImg2[row-1:row+2,col-1:col+2] = [255,0,0]
+    cv2.imshow("True Minutia", minutiaImg2)
     
+    print(len(minutia_list))
+ 
     cv2.waitKey()
     cv2.destroyAllWindows()
 #-----------------------------

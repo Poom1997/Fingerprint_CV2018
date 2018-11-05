@@ -2,6 +2,8 @@ import cv2
 import numpy as np
 import Binarizer
 import Skeletonizer
+#iceyo try import
+import math
 
 #-----------------------------
 #minutiae types
@@ -41,6 +43,34 @@ class MnExtractor:
                         bifurcation_list.append((row,col))
         return ridge_ending_list,bifurcation_list
 
+    def removeSideMinutia(self, img,minutia_list):
+        useable_mn = []
+        for mn in minutia_list:
+            center = (mn[0] - mn[0]%16,mn[1] - mn[1]%16)
+            if(np.mean(img[center[0] : center[0]+16, center[1]-16:center[1]]) == 255):
+                continue
+            elif(np.mean(img[center[0] : center[0]+16, center[1]+16:center[1]+32]) == 255):
+                continue
+            else:
+                useable_mn.append(mn)
+        return useable_mn
+                
+    def removeBrokenRidge(self,minutia_list):
+        optimal_end_ridge = minutia_list.copy()
+        
+        for i in range(0,len(minutia_list)):
+            for j in range(0,len(minutia_list)):
+                if(minutia_list[i] != minutia_list[j]):
+                    if(math.sqrt(((minutia_list[i][0] - minutia_list[j][0])**2) + ((minutia_list[i][1] - minutia_list[j][1])**2)) < 5):
+                        try:
+                            optimal_end_ridge.remove(minutia_list[i])
+                        except Exception:
+                            pass
+                        try:
+                            optimal_end_ridge.remove(minutia_list[j])
+                        except Exception:
+                            pass
+        return optimal_end_ridge
 
     def isEndPointBoundary(self,mat,point):
         isBoundary = True
@@ -61,8 +91,6 @@ class MnExtractor:
 
         return isBoundary
                 
-            
-
     def calculateCn(self,mat):
         Sum = 0
         lt = [mat[0,0], mat[0,1],mat[0,2],mat[1,2],mat[2,2],mat[2,1],mat[2,0],mat[1,0]]

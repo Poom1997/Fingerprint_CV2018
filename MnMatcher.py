@@ -15,11 +15,6 @@ class MnMatcher:
     
 #-----------------------------
 if __name__ == "__main__":
-    img = cv2.imread("1_1.bmp", cv2.IMREAD_GRAYSCALE)
-    mnSet = MnExtractor.extract(img)
-    s = MnMatcher.match(mnSet, mnSet)
-    print(s)
-    cv2.waitKey()
-    cv2.destroyAllWindows()
+    pass
 
 #-----------------------------
