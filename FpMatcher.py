@@ -54,7 +54,13 @@ if __name__ == "__main__":
     fpEnhancer = FpEnhancer.FpEnhancer()
     blur = cv2.bilateralFilter(inverseSegmentImg,11,100,100)
     enhancedImg = fpEnhancer.enhance(blur, inverseSegmentImg)
+    rows, cols, *ch = maskImg.shape
+    for row in range(0,rows):
+        for col in range(0,cols):
+            if(enhancedImg[row,col] != 0):
+                enhancedImg[row,col] = 255
     cv2.imshow("Enhanced", enhancedImg)
+                
 
     #thin
     skeletonizer = Skeletonizer.Skeletonizer()
