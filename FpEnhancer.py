@@ -35,8 +35,6 @@ if __name__ == "__main__":
     cv2.imshow("blur", blur)
     img = fpEnhancer.enhance(blur, img)
 
-
-
     # binImg = Binarizer.binarize(img)
     
     cv2.waitKey()
