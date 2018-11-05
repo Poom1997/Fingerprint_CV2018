@@ -7,6 +7,9 @@ from Binarizer import *
 
 #-----------------------------
 class FpEnhancer:
+    def __init__(self):
+        self.ofMat = []
+        
     def enhance(self, fpImg, mskImg):
       print("Stub - Fingerprint Enhancement")                 #stub
       print("   Input - a fingerprint image (gray-scale)")    #stub
@@ -17,11 +20,15 @@ class FpEnhancer:
 
       ofDetector = OfDetector()
       orientationField = ofDetector.detect(fpImg)
+      self.ofMat = orientationField
 
       gbfb = GaborFilterbank()
       enhImg = gbfb.filter(fpImg, orientationField, None)
 
       return enhImg
+
+    def getOfMatrix(self):
+        return self.ofMat
         
 ###-----------------------------
 if __name__ == "__main__":

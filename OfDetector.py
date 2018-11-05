@@ -6,7 +6,7 @@ SIZE = 16
 #-----------------------------
 class OfDetector:
     def __init__(self):
-        pass
+        self.of = []
     
     def findOrientationBlock(self, block):
         gx = cv2.Sobel(block, cv2.CV_32F, 1, 0)
@@ -30,15 +30,15 @@ class OfDetector:
         height, width = fpImg.shape
 
         #Var. Init.
-        of = np.zeros((SIZE,SIZE), dtype=np.float32)
+        self.of = np.zeros((SIZE,SIZE), dtype=np.float32)
 
         for row in range(0,width, SIZE):
             for col in range(0,height, SIZE):
                 block = fpImg[row:row+SIZE, col:col+SIZE]
                 temp = self.findOrientationBlock(block)
-                of[row // SIZE, col // SIZE] = self.quantize(temp)
+                self.of[row // SIZE, col // SIZE] = self.quantize(temp)
                 
-        return of
+        return self.of
 
     def quantize(self, degrees):
         orList = [0, 22.5, 45, 67.5, 90, 112.5, 135, 157.5]

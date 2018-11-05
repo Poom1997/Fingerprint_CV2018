@@ -24,10 +24,8 @@ class GaborFilterbank:
             for col in range(0, cols, 16):
                 block = fpImg[row: row+16, col: col+16]
                 orientationOfBlock = orientationField[row//16][col//16]
-                #print(orientationOfBlock, end=' ')
                 filteredBlock = cv2.filter2D(block, cv2.CV_32F, self.gaborFilters[orientationOfBlock])
                 fpImg[row: row+16, col: col+16] = filteredBlock
-            #print()
 
         print("   Input - an orientation field")
         print("   Input - a mask image (region-of-interest)")
