@@ -38,7 +38,6 @@ class OfDetector:
                 temp = self.findOrientationBlock(block)
                 of[row // SIZE, col // SIZE] = self.quantize(temp)
                 
-        print(of)
         return of
 
     def quantize(self, degrees):

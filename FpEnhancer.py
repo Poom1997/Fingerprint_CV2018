@@ -19,26 +19,24 @@ class FpEnhancer:
       orientationField = ofDetector.detect(fpImg)
 
       gbfb = GaborFilterbank()
-      gbfb.filter(fpImg, orientationField, None)
+      enhImg = gbfb.filter(fpImg, orientationField, None)
 
-
-      enhImg = fpImg                                          #stub
       return enhImg
         
 ###-----------------------------
 if __name__ == "__main__":
-    ##pass
-    img = cv2.imread("img/1_1.bmp", cv2.IMREAD_GRAYSCALE)
-    fpEnhancer = FpEnhancer()
-    binImg = Binarizer.binarize(img)
-    blur = cv2.bilateralFilter(binImg,11,100,100)
-    cv2.imshow("blur", blur)
-    img = fpEnhancer.enhance(blur, img)
-
-    # binImg = Binarizer.binarize(img)
-    
-    cv2.waitKey()
-    cv2.destroyAllWindows()
+    pass
+##    img = cv2.imread("img/1_1.bmp", cv2.IMREAD_GRAYSCALE)
+##    fpEnhancer = FpEnhancer()
+##    binImg = Binarizer.binarize(img)
+##    blur = cv2.bilateralFilter(binImg,11,100,100)
+##    cv2.imshow("blur", blur)
+##    img = fpEnhancer.enhance(blur, img)
+##    cv2.imshow("enhanced", img)
+##    # binImg = Binarizer.binarize(img)
+##    
+##    cv2.waitKey()
+##    cv2.destroyAllWindows()
 
 #-----------------------------
 
