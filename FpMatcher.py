@@ -8,6 +8,7 @@ import MnMatcher
 import Binarizer
 import Skeletonizer
 import OfDetector
+import OfDisplay
 
 #-----------------------------
 class FpMatcher:
@@ -34,7 +35,7 @@ class FpMatcher:
 if __name__ == "__main__":
     ##Iceyo try code---------------------------------------
     
-    img = cv2.imread("img/1_3.bmp", cv2.IMREAD_GRAYSCALE)
+    img = cv2.imread("img/3_3.bmp", cv2.IMREAD_GRAYSCALE)
     cv2.imshow("Original Image", img)
 
     #segment1
@@ -60,7 +61,11 @@ if __name__ == "__main__":
             if(enhancedImg[row,col] != 0):
                 enhancedImg[row,col] = 255
     cv2.imshow("Enhanced", enhancedImg)
-                
+
+    #display ofMatrix
+    ofDisplay = OfDisplay.OfDisplay()
+    ofImg = ofDisplay.displayOrient(fpEnhancer.getOfMatrix())
+    cv2.imshow("Orientation Field", ofImg)
 
     #thin
     skeletonizer = Skeletonizer.Skeletonizer()

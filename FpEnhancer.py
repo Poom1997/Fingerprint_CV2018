@@ -19,8 +19,8 @@ class FpEnhancer:
       # Call OfDetector
 
       ofDetector = OfDetector()
-      orientationField = ofDetector.detect(fpImg)
-      self.ofMat = orientationField
+      orientationField, orientationMatrix = ofDetector.detect(fpImg)
+      self.ofMat = orientationMatrix
 
       gbfb = GaborFilterbank()
       enhImg = gbfb.filter(fpImg, orientationField, None)

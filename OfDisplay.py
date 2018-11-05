@@ -43,24 +43,24 @@ class OfDisplay:
                 elif(of[row//16,col//16] == 157.5):
                     pass
                 
-        cv2.imshow("ofImg", ofImg)
+        #cv2.imshow("ofImg", ofImg)
 
         
-        return None
+        return ofImg
         
 #-----------------------------
 if __name__ == "__main__":
     pass
-    img = cv2.imread("img/1_1.bmp", cv2.IMREAD_GRAYSCALE)
-    cv2.imshow("input image", img)
-    fpEnhancer = FpEnhancer.FpEnhancer()
-    ofDisplay = OfDisplay()
-    blur = cv2.bilateralFilter(img,11,100,100)
-    enhancedImg = fpEnhancer.enhance(blur, blur)
-    cv2.imshow("Enhanced", enhancedImg)
-    ofMat = fpEnhancer.getOfMatrix()
-    ofDisplay.displayOrient(ofMat)
-    cv2.waitKey()
-    cv2.destroyAllWindows()
+##    img = cv2.imread("img/1_1.bmp", cv2.IMREAD_GRAYSCALE)
+##    cv2.imshow("input image", img)
+##    fpEnhancer = FpEnhancer.FpEnhancer()
+##    ofDisplay = OfDisplay()
+##    blur = cv2.bilateralFilter(img,11,100,100)
+##    enhancedImg = fpEnhancer.enhance(blur, blur)
+##    cv2.imshow("Enhanced", enhancedImg)
+##    ofMat = fpEnhancer.getOfMatrix()
+##    ofDisplay.displayOrient(ofMat)
+##    cv2.waitKey()
+##    cv2.destroyAllWindows()
 
 #-----------------------------
