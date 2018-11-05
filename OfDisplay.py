@@ -11,7 +11,39 @@ class OfDisplay:
         print("   Output - Orientation Field Image")        #stub
 
         
+        of = ofMat
+
+        for rows in range(0,16):
+            for cols in range(0,16):
+                of[rows, cols] = 180 - of[rows, cols]
+
+        ofImg = np.zeros((256,256), dtype=np.float32)
+        ofImg[:] = 255
+
+        rows, cols = ofImg.shape
         print(ofMat)
+        for row in range(0,rows,16):
+            for col in range(0,cols,16):
+                if(of[row//16,col//16] == 0 or of[row//16,col//16] == 180):
+                    cv2.line(ofImg,(col,row+8),(col+16,row+8),0,1)            
+                elif(of[row//16,col//16] == 22.5):
+                    cv2.line(ofImg,(col,row+16),(col+16,row+8),0,1)
+                elif(of[row//16,col//16] == 45):
+                    cv2.line(ofImg,(col,row+16),(col+16,row),0,1)
+                elif(of[row//16,col//16] == 67.5):
+                    cv2.line(ofImg,(col,row+16),(col+8,row),0,1)
+                elif(of[row//16,col//16] == 90):
+                    cv2.line(ofImg,(col+8,row),(col+8,row+16),0,1)
+                elif(of[row//16,col//16] == 112.5):
+                    cv2.line(ofImg,(col+16,row+16),(col+8,row),0,1)
+                elif(of[row//16,col//16] == 135.0):
+                    cv2.line(ofImg,(col+16,row+16),(col,row),0,1)
+                elif(of[row//16,col//16] == 157.5):
+                    cv2.line(ofImg,(col+16,row+16),(col,row+8),0,1)
+                elif(of[row//16,col//16] == 157.5):
+                    pass
+                
+        cv2.imshow("ofImg", ofImg)
 
         
         return None
