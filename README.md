@@ -13,7 +13,7 @@ In-class project to detect fingerprints.
   King Mongkut's Institute of Technology Ladkrabang (KMITL)<br>
 
 # AUTHORS AND PROGRAMMER
-  Phat Thaveepholcharoen (58090027)<br>
+  Phat Thaveepholcharoen (58090025)<br>
   Pakpoom Kunalittipol (58090027)<br>
   Bhurinuth Wongsrisakul (58090030)<br>
   Sirapop Issariyodom (58090041)<br>
