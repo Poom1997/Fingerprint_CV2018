@@ -1,85 +1,207 @@
-9_1.bmp vs 9_2.bmp : 0.9147286821705426
-9_1.bmp vs 9_3.bmp : 0.8449612403100775
-9_1.bmp vs 13_1.bmp : 0.8914728682170543
-9_1.bmp vs 13_2.bmp : 0.8062015503875969
-9_1.bmp vs 13_3.bmp : 0.9457364341085271
-9_1.bmp vs 15_1.bmp : 0.8951048951048951
-9_1.bmp vs 15_2.bmp : 0.8778625954198473
-9_1.bmp vs 15_3.bmp : 0.9097222222222222
-9_1.bmp vs 16_1.bmp : 0.896774193548387
-9_1.bmp vs 16_2.bmp : 0.8888888888888888
-9_1.bmp vs 16_3.bmp : 0.9157303370786517
-9_1.bmp vs 19_1.bmp : 0.7596899224806202
-9_1.bmp vs 19_2.bmp : 0.751937984496124
-9_1.bmp vs 19_3.bmp : 0.7751937984496124
-9_2.bmp vs 9_3.bmp : 0.7857142857142857
-9_2.bmp vs 13_1.bmp : 0.8333333333333334
-9_2.bmp vs 13_2.bmp : 0.8571428571428571
-9_2.bmp vs 13_3.bmp : 0.9206349206349206
-9_2.bmp vs 15_1.bmp : 0.8741258741258742
-9_2.bmp vs 15_2.bmp : 0.9083969465648855
-9_2.bmp vs 15_3.bmp : 0.9166666666666666
-9_2.bmp vs 16_1.bmp : 0.9161290322580645
-9_2.bmp vs 16_2.bmp : 0.8654970760233918
-9_2.bmp vs 16_3.bmp : 0.9044943820224719
-9_2.bmp vs 19_1.bmp : 0.7698412698412699
-9_2.bmp vs 19_2.bmp : 0.7777777777777778
-9_2.bmp vs 19_3.bmp : 0.7222222222222222
-9_3.bmp vs 13_1.bmp : 0.8198198198198198
-9_3.bmp vs 13_2.bmp : 0.7027027027027027
-9_3.bmp vs 13_3.bmp : 0.7964601769911505
-9_3.bmp vs 15_1.bmp : 0.7132867132867133
-9_3.bmp vs 15_2.bmp : 0.732824427480916
-9_3.bmp vs 15_3.bmp : 0.7708333333333334
-9_3.bmp vs 16_1.bmp : 0.8451612903225807
-9_3.bmp vs 16_2.bmp : 0.783625730994152
-9_3.bmp vs 16_3.bmp : 0.7865168539325843
-9_3.bmp vs 19_1.bmp : 0.6756756756756757
-9_3.bmp vs 19_2.bmp : 0.6486486486486487
-9_3.bmp vs 19_3.bmp : 0.7117117117117117
-13_1.bmp vs 13_2.bmp : 0.8899082568807339
-13_1.bmp vs 13_3.bmp : 0.8849557522123894
-13_1.bmp vs 15_1.bmp : 0.8601398601398601
-13_1.bmp vs 15_2.bmp : 0.8244274809160306
-13_1.bmp vs 15_3.bmp : 0.9027777777777778
-13_1.bmp vs 16_1.bmp : 0.8774193548387097
-13_1.bmp vs 16_2.bmp : 0.8128654970760234
-13_1.bmp vs 16_3.bmp : 0.8314606741573034
-13_1.bmp vs 19_1.bmp : 0.7777777777777778
-13_1.bmp vs 19_2.bmp : 0.7314814814814815
-13_1.bmp vs 19_3.bmp : 0.6944444444444444
-13_2.bmp vs 13_3.bmp : 0.8407079646017699
-13_2.bmp vs 15_1.bmp : 0.8671328671328671
-13_2.bmp vs 15_2.bmp : 0.8473282442748091
-13_2.bmp vs 15_3.bmp : 0.9305555555555556
-13_2.bmp vs 16_1.bmp : 0.8709677419354839
-13_2.bmp vs 16_2.bmp : 0.847953216374269
-13_2.bmp vs 16_3.bmp : 0.8146067415730337
-13_2.bmp vs 19_1.bmp : 0.7339449541284404
-13_2.bmp vs 19_2.bmp : 0.7981651376146789
-13_2.bmp vs 19_3.bmp : 0.7522935779816514
-13_3.bmp vs 15_1.bmp : 0.9020979020979021
-13_3.bmp vs 15_2.bmp : 0.8854961832061069
-13_3.bmp vs 15_3.bmp : 0.8958333333333334
-13_3.bmp vs 16_1.bmp : 0.9225806451612903
-13_3.bmp vs 16_2.bmp : 0.9122807017543859
-13_3.bmp vs 16_3.bmp : 0.8426966292134831
-13_3.bmp vs 19_1.bmp : 0.7433628318584071
-13_3.bmp vs 19_2.bmp : 0.6902654867256637
-13_3.bmp vs 19_3.bmp : 0.7168141592920354
-15_1.bmp vs 15_2.bmp : 0.916083916083916
-15_1.bmp vs 15_3.bmp : 0.9722222222222222
-15_1.bmp vs 16_1.bmp : 0.864516129032258
-15_1.bmp vs 16_2.bmp : 0.8830409356725146
-15_1.bmp vs 16_3.bmp : 0.9157303370786517
-15_1.bmp vs 19_1.bmp : 0.7342657342657343
-15_1.bmp vs 19_2.bmp : 0.7832167832167832
-15_1.bmp vs 19_3.bmp : 0.6993006993006993
-15_2.bmp vs 15_3.bmp : 0.8888888888888888
-15_2.bmp vs 16_1.bmp : 0.9161290322580645
-15_2.bmp vs 16_2.bmp : 0.9122807017543859
-15_2.bmp vs 16_3.bmp : 0.8539325842696629
-15_2.bmp vs 19_1.bmp : 0.6793893129770993
-15_2.bmp vs 19_2.bmp : 0.7633587786259542
-15_2.bmp vs 19_3.bmp : 0.7480916030534351
-15_3.bmp vs 16_1.bmp : 0.8774193548387097
+9_1.bmp vs 9_2.bmp : 91.47286821705426
+9_1.bmp vs 9_3.bmp : 84.49612403100775
+9_1.bmp vs 13_1.bmp : 89.14728682170544
+9_1.bmp vs 13_2.bmp : 80.62015503875969
+9_1.bmp vs 13_3.bmp : 94.57364341085271
+9_1.bmp vs 15_1.bmp : 89.5104895104895
+9_1.bmp vs 15_2.bmp : 87.78625954198473
+9_1.bmp vs 15_3.bmp : 90.97222222222221
+9_1.bmp vs 16_1.bmp : 89.6774193548387
+9_1.bmp vs 16_2.bmp : 88.88888888888889
+9_1.bmp vs 16_3.bmp : 91.57303370786516
+9_1.bmp vs 19_1.bmp : 75.96899224806202
+9_1.bmp vs 19_2.bmp : 75.1937984496124
+9_1.bmp vs 19_3.bmp : 77.51937984496125
+9_2.bmp vs 9_3.bmp : 78.57142857142857
+9_2.bmp vs 13_1.bmp : 83.33333333333334
+9_2.bmp vs 13_2.bmp : 85.71428571428571
+9_2.bmp vs 13_3.bmp : 92.06349206349206
+9_2.bmp vs 15_1.bmp : 87.41258741258741
+9_2.bmp vs 15_2.bmp : 90.83969465648855
+9_2.bmp vs 15_3.bmp : 91.66666666666666
+9_2.bmp vs 16_1.bmp : 91.61290322580645
+9_2.bmp vs 16_2.bmp : 86.54970760233918
+9_2.bmp vs 16_3.bmp : 90.4494382022472
+9_2.bmp vs 19_1.bmp : 76.98412698412699
+9_2.bmp vs 19_2.bmp : 77.77777777777779
+9_2.bmp vs 19_3.bmp : 72.22222222222221
+9_3.bmp vs 13_1.bmp : 81.98198198198197
+9_3.bmp vs 13_2.bmp : 70.27027027027027
+9_3.bmp vs 13_3.bmp : 79.64601769911505
+9_3.bmp vs 15_1.bmp : 71.32867132867133
+9_3.bmp vs 15_2.bmp : 73.2824427480916
+9_3.bmp vs 15_3.bmp : 77.08333333333334
+9_3.bmp vs 16_1.bmp : 84.51612903225806
+9_3.bmp vs 16_2.bmp : 78.3625730994152
+9_3.bmp vs 16_3.bmp : 78.65168539325843
+9_3.bmp vs 19_1.bmp : 67.56756756756756
+9_3.bmp vs 19_2.bmp : 64.86486486486487
+9_3.bmp vs 19_3.bmp : 71.17117117117117
+13_1.bmp vs 13_2.bmp : 88.9908256880734
+13_1.bmp vs 13_3.bmp : 88.49557522123894
+13_1.bmp vs 15_1.bmp : 86.01398601398601
+13_1.bmp vs 15_2.bmp : 82.44274809160305
+13_1.bmp vs 15_3.bmp : 90.27777777777779
+13_1.bmp vs 16_1.bmp : 87.74193548387098
+13_1.bmp vs 16_2.bmp : 81.28654970760235
+13_1.bmp vs 16_3.bmp : 83.14606741573034
+13_1.bmp vs 19_1.bmp : 77.77777777777779
+13_1.bmp vs 19_2.bmp : 73.14814814814815
+13_1.bmp vs 19_3.bmp : 69.44444444444444
+13_2.bmp vs 13_3.bmp : 84.070796460177
+13_2.bmp vs 15_1.bmp : 86.7132867132867
+13_2.bmp vs 15_2.bmp : 84.7328244274809
+13_2.bmp vs 15_3.bmp : 93.05555555555556
+13_2.bmp vs 16_1.bmp : 87.09677419354838
+13_2.bmp vs 16_2.bmp : 84.7953216374269
+13_2.bmp vs 16_3.bmp : 81.46067415730337
+13_2.bmp vs 19_1.bmp : 73.39449541284404
+13_2.bmp vs 19_2.bmp : 79.81651376146789
+13_2.bmp vs 19_3.bmp : 75.22935779816514
+13_3.bmp vs 15_1.bmp : 90.20979020979021
+13_3.bmp vs 15_2.bmp : 88.54961832061069
+13_3.bmp vs 15_3.bmp : 89.58333333333334
+13_3.bmp vs 16_1.bmp : 92.25806451612904
+13_3.bmp vs 16_2.bmp : 91.22807017543859
+13_3.bmp vs 16_3.bmp : 84.26966292134831
+13_3.bmp vs 19_1.bmp : 74.33628318584071
+13_3.bmp vs 19_2.bmp : 69.02654867256636
+13_3.bmp vs 19_3.bmp : 71.68141592920354
+15_1.bmp vs 15_2.bmp : 91.6083916083916
+15_1.bmp vs 15_3.bmp : 97.22222222222221
+15_1.bmp vs 16_1.bmp : 86.45161290322581
+15_1.bmp vs 16_2.bmp : 88.30409356725146
+15_1.bmp vs 16_3.bmp : 91.57303370786516
+15_1.bmp vs 19_1.bmp : 73.42657342657343
+15_1.bmp vs 19_2.bmp : 78.32167832167832
+15_1.bmp vs 19_3.bmp : 69.93006993006993
+15_2.bmp vs 15_3.bmp : 88.88888888888889
+15_2.bmp vs 16_1.bmp : 91.61290322580645
+15_2.bmp vs 16_2.bmp : 91.22807017543859
+15_2.bmp vs 16_3.bmp : 85.39325842696628
+15_2.bmp vs 19_1.bmp : 67.93893129770993
+15_2.bmp vs 19_2.bmp : 76.33587786259542
+15_2.bmp vs 19_3.bmp : 74.80916030534351
+15_3.bmp vs 16_1.bmp : 87.74193548387098
+15_3.bmp vs 16_2.bmp : 88.88888888888889
+15_3.bmp vs 16_3.bmp : 89.8876404494382
+15_3.bmp vs 19_1.bmp : 73.61111111111111
+15_3.bmp vs 19_2.bmp : 77.08333333333334
+15_3.bmp vs 19_3.bmp : 75.0
+16_1.bmp vs 16_2.bmp : 89.47368421052632
+16_1.bmp vs 16_3.bmp : 89.8876404494382
+16_1.bmp vs 19_1.bmp : 79.35483870967742
+16_1.bmp vs 19_2.bmp : 75.48387096774194
+16_1.bmp vs 19_3.bmp : 77.41935483870968
+16_2.bmp vs 16_3.bmp : 92.69662921348315
+16_2.bmp vs 19_1.bmp : 71.34502923976608
+16_2.bmp vs 19_2.bmp : 76.0233918128655
+16_2.bmp vs 19_3.bmp : 75.43859649122807
+16_3.bmp vs 19_1.bmp : 70.2247191011236
+16_3.bmp vs 19_2.bmp : 72.47191011235955
+16_3.bmp vs 19_3.bmp : 74.71910112359551
+19_1.bmp vs 19_2.bmp : 73.07692307692307
+19_1.bmp vs 19_3.bmp : 69.44444444444444
+19_2.bmp vs 19_3.bmp : 76.92307692307693
+threshold = 0:false accept = 100.0false reject = 0.0
+threshold = 1:false accept = 100.0false reject = 0.0
+threshold = 2:false accept = 100.0false reject = 0.0
+threshold = 3:false accept = 100.0false reject = 0.0
+threshold = 4:false accept = 100.0false reject = 0.0
+threshold = 5:false accept = 100.0false reject = 0.0
+threshold = 6:false accept = 100.0false reject = 0.0
+threshold = 7:false accept = 100.0false reject = 0.0
+threshold = 8:false accept = 100.0false reject = 0.0
+threshold = 9:false accept = 100.0false reject = 0.0
+threshold = 10:false accept = 100.0false reject = 0.0
+threshold = 11:false accept = 100.0false reject = 0.0
+threshold = 12:false accept = 100.0false reject = 0.0
+threshold = 13:false accept = 100.0false reject = 0.0
+threshold = 14:false accept = 100.0false reject = 0.0
+threshold = 15:false accept = 100.0false reject = 0.0
+threshold = 16:false accept = 100.0false reject = 0.0
+threshold = 17:false accept = 100.0false reject = 0.0
+threshold = 18:false accept = 100.0false reject = 0.0
+threshold = 19:false accept = 100.0false reject = 0.0
+threshold = 20:false accept = 100.0false reject = 0.0
+threshold = 21:false accept = 100.0false reject = 0.0
+threshold = 22:false accept = 100.0false reject = 0.0
+threshold = 23:false accept = 100.0false reject = 0.0
+threshold = 24:false accept = 100.0false reject = 0.0
+threshold = 25:false accept = 100.0false reject = 0.0
+threshold = 26:false accept = 100.0false reject = 0.0
+threshold = 27:false accept = 100.0false reject = 0.0
+threshold = 28:false accept = 100.0false reject = 0.0
+threshold = 29:false accept = 100.0false reject = 0.0
+threshold = 30:false accept = 100.0false reject = 0.0
+threshold = 31:false accept = 100.0false reject = 0.0
+threshold = 32:false accept = 100.0false reject = 0.0
+threshold = 33:false accept = 100.0false reject = 0.0
+threshold = 34:false accept = 100.0false reject = 0.0
+threshold = 35:false accept = 100.0false reject = 0.0
+threshold = 36:false accept = 100.0false reject = 0.0
+threshold = 37:false accept = 100.0false reject = 0.0
+threshold = 38:false accept = 100.0false reject = 0.0
+threshold = 39:false accept = 100.0false reject = 0.0
+threshold = 40:false accept = 100.0false reject = 0.0
+threshold = 41:false accept = 100.0false reject = 0.0
+threshold = 42:false accept = 100.0false reject = 0.0
+threshold = 43:false accept = 100.0false reject = 0.0
+threshold = 44:false accept = 100.0false reject = 0.0
+threshold = 45:false accept = 100.0false reject = 0.0
+threshold = 46:false accept = 100.0false reject = 0.0
+threshold = 47:false accept = 100.0false reject = 0.0
+threshold = 48:false accept = 100.0false reject = 0.0
+threshold = 49:false accept = 100.0false reject = 0.0
+threshold = 50:false accept = 100.0false reject = 0.0
+threshold = 51:false accept = 100.0false reject = 0.0
+threshold = 52:false accept = 100.0false reject = 0.0
+threshold = 53:false accept = 100.0false reject = 0.0
+threshold = 54:false accept = 100.0false reject = 0.0
+threshold = 55:false accept = 100.0false reject = 0.0
+threshold = 56:false accept = 100.0false reject = 0.0
+threshold = 57:false accept = 100.0false reject = 0.0
+threshold = 58:false accept = 100.0false reject = 0.0
+threshold = 59:false accept = 100.0false reject = 0.0
+threshold = 60:false accept = 100.0false reject = 0.0
+threshold = 61:false accept = 100.0false reject = 0.0
+threshold = 62:false accept = 100.0false reject = 0.0
+threshold = 63:false accept = 100.0false reject = 0.0
+threshold = 64:false accept = 100.0false reject = 0.0
+threshold = 65:false accept = 98.88888888888889false reject = 0.0
+threshold = 66:false accept = 98.88888888888889false reject = 0.0
+threshold = 67:false accept = 98.88888888888889false reject = 0.0
+threshold = 68:false accept = 96.66666666666667false reject = 0.0
+threshold = 69:false accept = 96.66666666666667false reject = 0.0
+threshold = 70:false accept = 93.33333333333333false reject = 6.666666666666667
+threshold = 71:false accept = 91.11111111111111false reject = 6.666666666666667
+threshold = 72:false accept = 86.66666666666667false reject = 6.666666666666667
+threshold = 73:false accept = 84.44444444444444false reject = 6.666666666666667
+threshold = 74:false accept = 78.88888888888889false reject = 13.333333333333334
+threshold = 75:false accept = 75.55555555555556false reject = 13.333333333333334
+threshold = 76:false accept = 68.88888888888889false reject = 13.333333333333334
+threshold = 77:false accept = 65.55555555555556false reject = 20.0
+threshold = 78:false accept = 58.88888888888889false reject = 20.0
+threshold = 79:false accept = 55.55555555555556false reject = 26.666666666666668
+threshold = 80:false accept = 52.22222222222223false reject = 26.666666666666668
+threshold = 81:false accept = 51.11111111111111false reject = 26.666666666666668
+threshold = 82:false accept = 47.77777777777778false reject = 26.666666666666668
+threshold = 83:false accept = 46.666666666666664false reject = 26.666666666666668
+threshold = 84:false accept = 44.44444444444444false reject = 26.666666666666668
+threshold = 85:false accept = 40.0false reject = 40.0
+threshold = 86:false accept = 37.77777777777778false reject = 40.0
+threshold = 87:false accept = 33.33333333333333false reject = 40.0
+threshold = 88:false accept = 27.77777777777778false reject = 40.0
+threshold = 89:false accept = 23.333333333333332false reject = 60.0
+threshold = 90:false accept = 17.77777777777778false reject = 73.33333333333333
+threshold = 91:false accept = 12.222222222222221false reject = 73.33333333333333
+threshold = 92:false accept = 4.444444444444445false reject = 86.66666666666667
+threshold = 93:false accept = 2.2222222222222223false reject = 93.33333333333333
+threshold = 94:false accept = 1.1111111111111112false reject = 93.33333333333333
+threshold = 95:false accept = 0.0false reject = 93.33333333333333
+threshold = 96:false accept = 0.0false reject = 93.33333333333333
+threshold = 97:false accept = 0.0false reject = 93.33333333333333
+threshold = 98:false accept = 0.0false reject = 100.0
+threshold = 99:false accept = 0.0false reject = 100.0
+threshold = 100:false accept = 0.0false reject = 100.0
+EER = 40.0
