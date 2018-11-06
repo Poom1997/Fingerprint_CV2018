@@ -1,13 +1,9 @@
 import cv2
 import numpy as np
 
-#-----------------------------
 class Skeletonizer:
     def skeletonize(self, binImg):
-        print("Stub - Skeletonization")         #stub
-        print("   Input - a binary image")      #stub
-        print("   Output - a skeleton image")   #stub
-        skeletonImg = binImg.copy()                #stub
+        skeletonImg = binImg.copy()
 
         rows, cols, *ch = binImg.shape
         deleting = True
@@ -21,9 +17,6 @@ class Skeletonizer:
                         if(self.countWhiteToBlack(skeletonImg[row-1:row+2,col-1:col+2].copy()) == 1):
                             count = self.countBlack(skeletonImg[row-1:row+2,col-1:col+2].copy())
                             if(count >= 2 and count <= 6):
-##                                if(self.checkCondition(skeletonImg[row-1:row+2,col-1:col+2].copy())):
-##                                    skeletonImg[row,col] = 255
-##                                    deleting = True
                                 if(Round % 2 == 0 and self.checkOddCondition(skeletonImg[row-1:row+2,col-1:col+2])):
                                     skeletonImg[row,col] = 255
                                     deleting = True
@@ -67,17 +60,4 @@ class Skeletonizer:
         if(lt[-1] == 255 and lt[0] == 0):
             count += 1
         return count
-    
-#-----------------------------
-##if __name__ == "__main__":
-##    img = cv2.imread("1_1.bmp", cv2.IMREAD_GRAYSCALE)
-##    from Binarizer import Binarizer
-##    binImg = Binarizer.binarize(img)
-##    skeletonImg = Skeletonizer.skeletonize(binImg)
-##    cv2.imshow("skeleton", skeletonImg)
-##    cv2.imwrite("skeleton.bmp", skeletonImg)
-##    cv2.waitKey()
-##    cv2.destroyAllWindows()
-
-#-----------------------------
 

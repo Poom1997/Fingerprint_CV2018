@@ -9,7 +9,6 @@ import Skeletonizer
 import OfDetector
 import OfDisplay
 
-#-----------------------------
 class FpMatcher:
     def __init__(self):
         pass

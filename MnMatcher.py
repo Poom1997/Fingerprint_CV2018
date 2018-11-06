@@ -3,7 +3,6 @@ import numpy as np
 import math
 from MnExtractor import *
 
-#-----------------------------
 class MnMatcher:
 
     def distance(self,x1,y1,x2,y2):

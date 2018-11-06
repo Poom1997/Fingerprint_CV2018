@@ -3,7 +3,7 @@ import numpy as np
 import math
 
 SIZE = 16
-#-----------------------------
+
 class OfDetector:
     def __init__(self):
         self.original = []
@@ -59,16 +59,3 @@ class OfDetector:
                 maxd = deg
                 temp = degree
         return temp
-        
-#-----------------------------
-if __name__ == "__main__":
-    pass
-##    inpImg = cv2.imread("img/1_1.BMP", cv2.IMREAD_GRAYSCALE)
-##    ofDetect = OfDetector()
-##    temp = ofDetect.detect(inpImg)
-##    print(len(temp))
-##    height, width = inpImg.shape
-##    cv2.waitKey()
-##    cv2.destroyAllWindows()
-
-#-----------------------------
