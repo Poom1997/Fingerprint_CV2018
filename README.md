@@ -21,10 +21,7 @@ In-class project to detect fingerprints.
 
 # INITIAL DESCRIPTION
 
-  This is a program created to match and compare the fingerprints. <br>
-  The inputs are 2 fingerprint image, output will be the score of <br>
-  the similarity between the 2 fingers from the input. The score <br>
-  will be in the range of 0-100%
+  This is a program created to match and compare the fingerprints. The inputs are 2 fingerprint image, output will be the score of the similarity between the 2 fingers from the input. The score will be in the range of 0-100%
 
 # ADDITIONAL DESCRIPTION
 
