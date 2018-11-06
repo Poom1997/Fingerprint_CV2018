@@ -30,6 +30,6 @@ In-class project to detect fingerprints.
   **1)** Python-numpy <br>
   **2)** Python 3.6.6<br>
 # 
-**PROGRAM VERSION: 0.1(Alpha)<br>**
+**PROGRAM VERSION: 1.3<br>**
 
-THIS DOCUMENT IS UPDATED AS-OF 16 OCTOBER 2018<br>
+THIS DOCUMENT IS UPDATED AS-OF 06 NOVEMBER 2018<br>
