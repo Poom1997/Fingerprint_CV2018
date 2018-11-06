@@ -80,4 +80,4 @@ class FpMatcher:
         minutia2 = self.getMinutia(fpImg2)
         matcher = MnMatcher.MnMatcher()
         similarity = matcher.match(minutia1, minutia2)
-        return similarity
+        return similarity*100
