@@ -11,11 +11,6 @@ class FpEnhancer:
         self.original = []
         
     def enhance(self, fpImg, mskImg):
-      print("Stub - Fingerprint Enhancement")
-      print("   Input - a fingerprint image (gray-scale)")
-      print("   Input - a mask image (region-of-interest)")
-      print("   Output - an enhanced image")
-
       # Call OfDetector
       ofDetector = OfDetector()
       orientationField, orientationMatrix,originalData = ofDetector.detect(fpImg)

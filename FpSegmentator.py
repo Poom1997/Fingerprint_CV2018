@@ -8,12 +8,8 @@ class FpSegmentator:
         self.blockSize = bs
         
     def segment(self, fpImg):  
-        print("Stub - Fingerprint segmentation")                #stub
-        print("   Input - a fingerprint image")                 #stub
-        print("   Output - a segmented image")                  #stub
-        print("   Output - a mask image (region-of-interest)")  #stub
-        segmentedImg = fpImg                                    #stub       
-        maskImg = fpImg                                         #stub
+        segmentedImg = fpImg    
+        maskImg = fpImg
 
         rows, cols, *ch = maskImg.shape
         total = 0
