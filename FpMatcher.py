@@ -96,14 +96,24 @@ if __name__ == "__main__":
                 minutiaImg[row-1:row+2,col-1:col+2] = [255,0,0]
     cv2.imshow("Minutia", minutiaImg)
 
+
+    test_lt = [(91, 164),(29, 106)]
+    test_lt2 = [(82, 169),(20, 113)]
     for row in range(1,rows-1):
         for col in range(1,cols-1):
-            if((row,col) in minutia_list):
-                minutiaImg2[row-1:row+2,col-1:col+2] = [0,255,0]
+##            if((row,col) in minutia_list):
+##                minutiaImg2[row-1:row+2,col-1:col+2] = [0,255,0]
+            if((row,col) in test_lt):
+                minutiaImg2[row-1:row+2,col-1:col+2] = [255,0,0]
+            elif((row,col) in test_lt2):
+                minutiaImg2[row-1:row+2,col-1:col+2] = [0,0,255]
+
     cv2.imshow("True Minutia", minutiaImg2)
-    
+
     print(len(minutia_list))
-    print(str(fpEnhancer.getOrientation(51,136)))
+    #print(minutia_list)
+    print(bifurcation_list)
+    print(str(fpEnhancer.getOrientation(92,156)))
     
     cv2.waitKey()
     cv2.destroyAllWindows()
