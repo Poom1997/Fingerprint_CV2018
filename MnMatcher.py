@@ -124,9 +124,9 @@ if __name__ == "__main__":
     
     matcher = MnMatcher()
     pic_no = 1
-    print("Input finger is : " + " 1_1")
+    print("Input finger is : " + " 4_4")
     for i in range(len(dataSet)):
-        m1 = set1_4
+        m1 = set4_4
         m2 = dataSet[i]
         if(i % 4 == 0):
             pic_no += 1
@@ -138,11 +138,11 @@ if __name__ == "__main__":
         else:
             corresponding = matcher.match(m2,m1)
             percentage = (corresponding / len(m2))
+        if(percentage > 0.8):
+            print("Matched" ,end = "  with  ")
+        else:
+            print("-------",end = "  with  ")
         print(percentage)
-##        if(percentage > 0.8):
-##            print("Matched")
-##        else:
-##            print("-")
         print()
 
 #-----------------------------
